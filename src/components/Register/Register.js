@@ -14,7 +14,7 @@ function Register() {
   return (
     <div>
       <Navbar />
-      <div className="register template d-flex justify-content-center align-items-center vh-100 bg-primary">
+      <div className="register template d-flex justify-content-center align-items-center vh-100 ">
         <div className="form_container p-5 rounded bg-white">
           <form onSubmit={handleSubmit}>
             <h3>Registration Form</h3>
