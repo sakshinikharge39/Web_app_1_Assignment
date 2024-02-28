@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Navbar.css'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -12,9 +13,9 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Sales-App
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,21 +30,21 @@ const Navbar = () => {
         </button>
         <div className={"collapse navbar-collapse" + (isOpen ? " show" : "")}>
           <div className="navbar-nav">
-            <a className="nav-link active" aria-current="page" href="#">
+            <Link className="nav-link active" aria-current="page" to="/">
               Add Sales
-            </a>
-            <a className="nav-link" href="#">
+            </Link>
+            <Link className="nav-link" href="#">
               Top 5 Sales
-            </a>
-            <a className="nav-link" href="#">
+            </Link>
+            <Link className="nav-link" to="#">
               Today's Total Revenue
-            </a>
-            <a className="nav-link" href="#">
+            </Link>
+            <Link className="nav-link" to="/login">
               Login 
-            </a>
-            <a className="nav-link" href="#">
+            </Link>
+            <Link className="nav-link" to="/register">
               Register
-            </a>
+            </Link>
             <a className="nav-link" href="#">
               Logout
             </a>
