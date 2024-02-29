@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { ObjContext } from "../../context/objContext";
 import Navbar from "../Navbar/Navbar";
+import TotalRevenue from "../Totalrevenue/Totalrevenue"; // Import the TotalRevenue component
 
 function Top5sales() {
     const {obj, setObj, getTop5Sales} = useContext(ObjContext)
     console.log(obj);
+
   return (
     <div>
       <Navbar />
@@ -35,3 +37,4 @@ function Top5sales() {
 }
 
 export default Top5sales;
+

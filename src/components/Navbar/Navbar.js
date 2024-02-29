@@ -1,3 +1,4 @@
+// navbar by using bootstrap
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ const Navbar = () => {
             <a className="nav-link" href="/top5sales">
               Top 5 Sales
             </a>
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/totalrevenue">
               Today's Total Revenue
             </a>
             <Link className="nav-link" to="/login">
@@ -44,7 +45,7 @@ const Navbar = () => {
             <Link className="nav-link" to="/register">
               Register
             </Link>
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/">
               Logout
             </a>
           </div>

@@ -1,3 +1,4 @@
+//login.js
 import React, { useContext } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
@@ -38,18 +39,6 @@ function Login() {
             </p>
           </form>
 
-          <div>
-            {getTop5Sales().map((val, index) => (
-              <div>
-                <div>{val.id}</div>
-                <div>
-                  {val.productName} | {val.amount}
-                </div>
-                <div>{val.quantity}</div>
-                <div>{}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

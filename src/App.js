@@ -8,6 +8,8 @@ import Register from "./components/Register/Register";
 import ObjContext, { ObjProvider } from "./context/objContext";
 import { useState } from "react";
 import Top5sales from "./components/Top5sales/Top5sales";
+import TotalRevenue from "./components/Totalrevenue/Totalrevenue";
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Addsales />} />
             <Route path="/top5sales" element={<Top5sales />} />
+            <Route path="/totalrevenue" element={<TotalRevenue />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
