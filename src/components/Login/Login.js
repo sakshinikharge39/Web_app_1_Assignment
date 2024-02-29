@@ -1,22 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Login.css";
-import { Link, useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import { ObjContext } from "../../context/objContext";
 
 function Login() {
-  const navigate = useNavigate();
+  const { getTop5Sales } = useContext(ObjContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Redirect to the Addsales page after login
-    navigate("/");
-  };
   return (
     <div>
       <Navbar />
-      <div className="login template d-flex justify-content-center align-items-center vh-100">
+      <div className="login template d-flex justify-content-center align-items-center vh-100 bg-primary">
         <div className="form_container p-5 rounded bg-white">
-          <form onSubmit={handleSubmit}>
+          <form>
             <h3>Login Form</h3>
             <div className="mb-2">
               <label htmlFor="email">Email</label>
@@ -41,6 +37,19 @@ function Login() {
               <Link to="/Register">Register</Link>
             </p>
           </form>
+
+          <div>
+            {getTop5Sales().map((val, index) => (
+              <div>
+                <div>{val.id}</div>
+                <div>
+                  {val.productName} | {val.amount}
+                </div>
+                <div>{val.quantity}</div>
+                <div>{}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

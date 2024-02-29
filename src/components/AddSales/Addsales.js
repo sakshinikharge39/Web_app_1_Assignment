@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Addsales.css";
 import Navbar from "../Navbar/Navbar";
-import useSalesStore  from "../../zustand/salesStore";
-import useStore from "../../zustand/salesStore";
+
 
 function Addsales() {
   const [productName, setProductName] = useState("");

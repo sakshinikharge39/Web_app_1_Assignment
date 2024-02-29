@@ -1,23 +1,15 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
 function Register() {
-  const navigate = useNavigate(); // Initialize useNavigate hook
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Redirect to the login page after registration
-    navigate("/login");
-  };
-
   return (
     <div>
       <Navbar />
-      <div className="register template d-flex justify-content-center align-items-center vh-100 ">
+      <div className="register template d-flex justify-content-center align-items-center vh-100 bg-primary">
         <div className="form_container p-5 rounded bg-white">
-          <form onSubmit={handleSubmit}>
-            <h3>Registration Form</h3>
+          <form>
+            <h3>Registeration Form</h3>
             <div className="mb-2">
               <label htmlFor="fname">First Name</label>
               <input
@@ -51,12 +43,10 @@ function Register() {
               />
             </div>
             <div className="d-grid">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
+              <button className="btn btn-primary">Submit</button>
             </div>
             <p className="text-center mt-2">
-              Already have an account? <Link to="/login">Login</Link>
+              <Link to="/Login">Login</Link>
             </p>
           </form>
         </div>
@@ -66,5 +56,3 @@ function Register() {
 }
 
 export default Register;
-
-

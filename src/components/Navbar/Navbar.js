@@ -1,21 +1,20 @@
 import React, { useState } from "react";
-import './Navbar.css'
+import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isOpen, setIsopen] = useState(false);
 
-    const [isOpen, setIsopen] = useState(false);
-
-    const toggleNavbar = () =>{
-        setIsopen(!isOpen);
-    };
+  const toggleNavbar = () => {
+    setIsopen(!isOpen);
+  };
 
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#">
           Sales-App
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,7 +22,7 @@ const Navbar = () => {
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
-          aria-expanded= {isOpen ? "true" : "false"}
+          aria-expanded={isOpen ? "true" : "false"}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
@@ -33,14 +32,14 @@ const Navbar = () => {
             <Link className="nav-link active" aria-current="page" to="/">
               Add Sales
             </Link>
-            <Link className="nav-link" href="#">
+            <a className="nav-link" href="/top5sales">
               Top 5 Sales
-            </Link>
-            <Link className="nav-link" to="#">
+            </a>
+            <a className="nav-link" href="#">
               Today's Total Revenue
-            </Link>
+            </a>
             <Link className="nav-link" to="/login">
-              Login 
+              Login
             </Link>
             <Link className="nav-link" to="/register">
               Register
