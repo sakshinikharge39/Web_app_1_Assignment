@@ -1,14 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Addsales.css";
 import Navbar from "../Navbar/Navbar";
+import useSalesStore  from "../../zustand/salesStore";
+import useStore from "../../zustand/salesStore";
 
 function Addsales() {
   const [productName, setProductName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [amount, setAmount] = useState("");
+  // const bears = useStore((state) => state.bears)
+
+  // const {sales,addSales} = useSalesStore();
+//   const top5Sales = () => sales.sort((a,b) => {
+//     if(a.amount > b.amount){
+//         return -1
+//     }else if(a.amount < b.amount){
+//         return 1
+//     }
+//     return b;
+// })
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let data = {
+      productName,
+      quantity,
+      amount
+    }
+
+    // addSales(sales)
     // Perform submission logic here
     console.log("Product Name:", productName);
     console.log("Quantity:", quantity);
@@ -18,6 +38,10 @@ function Addsales() {
     setQuantity("");
     setAmount("");
   };
+
+  // useEffect(()=>{
+  //   console.log("Top 5 Sales",top5Sales());
+  // },[sales])
 
   return (
     <div>
